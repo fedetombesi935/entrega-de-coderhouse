@@ -1,0 +1,626 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.contenedor {  display: grid;
+    
+    height: 100vh;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr 0.3fr;
+    gap: 0px 0px;
+    grid-template-areas:
+      "header header header"
+      "Main Main Main"
+      "footer footer footer";
+  }
+  
+  .header { grid-area: header;
+    background-color: #5D02A2;
+ }
+
+ header div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    
+    height:200px;
+}
+
+
+    
+    
+.logo{
+    
+    width: 220px;
+    display: inline-block;
+    
+    
+}
+h1{
+    align-self: center;
+    justify-self: flex-start;
+    color: #E5EFF7;
+    font-family: "Kanit-SemiBold";
+    font-size: 50px;
+    display: inline-block;
+}
+
+.menu{
+    background-color:#191818fe;
+    height: 50px;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    
+}
+
+
+.barra a{
+    padding: 15px;
+    margin: 5px;
+    color: #E5EFF7;
+    text-decoration: none;
+    
+
+   
+   
+}
+.barra a:hover{
+    background-color: #6c02be;
+    color: #191818fe;
+    
+}
+  
+  .Main { grid-area: Main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+ }
+  
+  .footer { grid-area: footer;
+    background-color: #5D02A2;
+    color: #E5EFF7;
+    padding: 30px; }
+
+    footer h3{
+        display:inline-block;
+        padding-bottom: 10px;
+        font-family: "Kanit-SemiBold";
+    }
+    footer ul{
+        list-style: none;
+        font-weight: 400;
+    }
+    footer ul li{
+        padding-bottom: 5px;
+    }
+    body{
+        font-family: Arial, Helvetica, sans-serif;
+    }  
+@font-face{
+    font-family: "Kanit-SemiBold";
+    src: url("../font/Kanit-SemiBold.ttf");
+
+}
+
+.caracteristicas{
+   padding: 1rem;
+   background-color:#5D02A2;
+   width: 1200px;
+   display: flex;
+   flex-direction: row;
+   flex-wrap: wrap;
+   justify-content: space-evenly;
+   border-radius: 25px
+
+}
+.caracteristicas p{
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px;
+    width: 600px;
+    color: #E5EFF7 ;
+   
+}
+.caracteristicas img{
+    width: 500px;
+    border-radius: 25px;
+
+    
+}
+.cDp{
+    padding: 15px;
+    padding-left: 45px;
+}
+
+.mercado{
+    width: 1200px;
+    padding: 25px;
+}
+.mercado h2{
+    text-align: center;
+    
+    padding-bottom: 20px;
+}
+
+.mercado div{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    background-color: #6c02be;
+    border: solid #6c02be;
+    border-radius: 25px;
+}
+.destacado{
+    width: 250px;
+    margin: 10px;
+    border-radius: 25px;
+    }
+.catalogo{
+    padding: 10px;
+    width: 1200px;
+    display: flex;
+    flex-direction:row ;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.catalogo h2{
+    display: inline-block;
+   
+
+}
+.catalogo img{
+    display: inline-block;
+    width: 250px;
+    margin: 20px ;
+    border-radius: 25px;
+
+}
+
+.mapa{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 400px;
+}
+.mapa img{
+    width: 450px;
+    border-radius: 25px;
+    border: solid black;
+   
+}
+
+.mapa ul{
+    padding: 20px;
+    list-style: none;
+    display: block;
+    font-size: 20px;
+    font-family: "Kanit-SemiBold";
+}
+.nosotros{
+    
+    width: 1260px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 20px;
+}
+.nosotros img{
+    width: 450px;
+    height: 300px;
+    border-radius: 25px;
+    border: solid black;
+    
+}
+.nosotros p{
+    font-size: 17px;
+    display: inline-block;
+    padding: 10px;
+    width: 600px;
+   
+    font-family: Arial, Helvetica, sans-serif;
+}
+.cuadro{
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+
+}
+
+@media screen and (max-width: 768px){
+
+   
+    .contenedor {  display: grid;
+    
+        height: 100vh;
+        grid-template-columns: 1fr 1fr ;
+        grid-template-rows: 0.5fr 2fr ;
+        gap: 0px 0px;
+        grid-template-areas:
+          "header header "
+          "Main Main "
+          "footer footer ";
+      }
+      .header { grid-area: header;
+        background-color: #5D02A2;
+     }
+    
+     header div{
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center;
+        
+        height:200px;
+    } 
+        
+    .logo{
+        
+        width: 120px;
+        display: inline-block;
+        
+        
+    }
+
+    h1{
+        justify-self: flex-start;
+        color: #E5EFF7;
+        font-family: "Kanit-SemiBold";
+        font-size: 20px;
+        display: inline-block;
+    }
+
+    .menu{background-color:#191818fe;
+    height: 50px;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    }
+
+
+
+    .Main { grid-area: Main;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: center;
+     }
+      
+
+      .cDp{
+        text-align: center;
+      }
+      .caracteristicas{
+        padding: 1rem;
+        background-color:#5D02A2;
+        width: 600px;
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        align-items: center ;
+     
+     }
+     .mercado{
+        width: 600px;
+        padding: 25px;
+    }
+    .mercado h2{
+        text-align: center;
+        
+        padding-bottom: 20px;
+    }
+    
+    .mercado div{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        background-color: #6c02be;
+        border: solid #6c02be;
+        border-radius: 25px;
+    }
+    .destacado{
+        width: 180px;
+        margin: 10px;
+        border-radius: 25px;
+        }
+        .Main { grid-area: Main;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+         }
+
+         .catalogo{
+           
+            padding: 50px;
+            width: 100x;
+            display: flex;
+            flex-direction:row ;
+            flex-wrap: wrap;
+        
+         }
+
+         .catalogo h2{
+            display: inline-block;
+            text-align: center;
+           
+        
+        }
+        .catalogo img{
+            display: inline-block;
+            width: 250px;
+            margin: 20px ;
+            border-radius: 25px;
+         }
+          
+         .nosotros{
+    
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            height: 600px;
+            padding: 20px;
+        }
+        .nosotros img{
+            width: 450px;
+            height: 300px;
+            border-radius: 25px;
+            border: solid black;
+            
+        }
+        .nosotros p{
+            text-align: center;
+            font-size: 17px;
+            display: inline-block;
+            padding: 15px;
+            width: 600px;
+           
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .mapa{
+            width: 600px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            padding: 20px;
+            height: 500px;
+        }
+        .mapa img{
+            width: 450px;
+            border-radius: 25px;
+            border: solid black;
+           
+        }
+        
+        .mapa ul{
+            padding: 20px;
+            list-style: none;
+            display: block;
+            font-size: 20px;
+            font-family: "Kanit-SemiBold";
+         }
+
+
+
+          .footer { grid-area: footer;
+            background-color: #5D02A2;
+            color: #E5EFF7;
+            padding: 30px; }
+
+     }
+
+     @media screen and (max-width: 480px){
+
+   
+        .contenedor {  display: grid;
+        
+            height: 100vh;
+            grid-template-columns: 1fr  ;
+            grid-template-rows:  1fr ;
+            gap: 0px 0px;
+            grid-template-areas:
+              "header"
+              "Main"
+              "footer";
+          }
+          .header { grid-area: header;
+            background-color: #5D02A2;
+         }
+        
+         header div{
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center;
+            
+            height:200px;
+        } 
+            
+        .logo{
+            
+            width: 120px;
+            display: inline-block;
+            
+            
+        }
+    
+        h1{
+            justify-self: flex-start;
+            color: #E5EFF7;
+            font-family: "Kanit-SemiBold";
+            font-size: 20px;
+            display: inline-block;
+        }
+    
+        .menu{background-color:#191818fe;
+        height: 50px;
+        list-style: none;
+        margin: auto;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        }
+    
+    
+    
+        .Main { grid-area: Main;
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: center;
+         }
+          
+    
+          .cDp{
+            text-align: center;
+          }
+          .caracteristicas{
+            padding: 1rem;
+            background-color:#5D02A2;
+            width: 450px;
+            display: flex;
+            flex-direction: column;
+            flex-wrap: wrap;
+            align-items: center ;
+         
+         }
+
+         .caracteristicas p{
+            display: inline-block;
+            font-size: 17px;
+            padding: 10px;
+            width: 400px;
+            color: #E5EFF7 ;
+           
+        }
+        .caracteristicas img{
+            width: 400px;
+            border-radius: 25px;
+             }
+        .mercado{
+            width: 500px;
+            padding: 25px;
+        }
+        .mercado h2{
+            text-align: center;
+            
+            padding-bottom: 20px;
+        }
+        
+        .mercado div{
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            justify-content: space-evenly;
+            background-color: #6c02be;
+            border: solid #6c02be;
+            border-radius: 25px;
+        }
+        .destacado{
+            width: 180px;
+            margin: 10px;
+            border-radius: 25px;
+            }
+    
+             .catalogo{
+               
+                padding: 50px;
+                width: 500x;
+                display: flex;
+                flex-direction:row ;
+                flex-wrap: wrap;
+                justify-content: center;
+            
+             }
+    
+             .catalogo h2{
+                display: inline-block;
+                text-align: center;
+               
+            
+            }
+            .catalogo img{
+                display: inline-block;
+                width: 400px;
+                margin: 20px ;
+                margin-left: 80px;
+                border-radius: 25px;
+             }
+              
+             .nosotros{
+        
+                width: 600px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                height: 600px;
+                padding: 20px;
+            }
+            .nosotros img{
+                width: 450px;
+                height: 300px;
+                border-radius: 25px;
+                border: solid black;
+                
+            }
+            .nosotros p{
+                text-align: center;
+                font-size: 17px;
+                display: inline-block;
+                padding: 15px;
+                width: 600px;
+               
+                font-family: Arial, Helvetica, sans-serif;
+            }
+    
+            .mapa{
+                width: 600px;
+                display: flex;
+                flex-direction: column;
+                flex-wrap: wrap;
+                align-items: center;
+                padding: 20px;
+                height: 500px;
+            }
+            .mapa img{
+                width: 450px;
+                border-radius: 25px;
+                border: solid black;
+               
+            }
+            
+            .mapa ul{
+                padding: 20px;
+                list-style: none;
+                display: block;
+                font-size: 20px;
+                font-family: "Kanit-SemiBold";
+             }
+    
+    
+    
+              .footer { grid-area: footer;
+                background-color: #5D02A2;
+                color: #E5EFF7;
+                padding: 30px; }
+    
+          }
