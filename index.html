@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cuadros con onda</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/style.css">
 </head>
 
@@ -30,28 +31,42 @@
             </ul>
         </nav>
     </header>
-    <main class="Main">
-        <Section>
-            <h2 class="cDp">Caracteristicas de nuestro producto</h2>       
+    <main class="main">
+        
+        <section>
+            <h2 class="titulo-caracteristicas">Caracteristicas de nuestro producto</h2>       
 <div class="caracteristicas">
     
     
     <img  src="./imagenes/Diseño sin título.png" alt="fotos info">
     
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Repudiandae facilis, nihil sunt eaque beatae atque veritatis, expedita consectetur numquam, ex quaerat necessitatibus inventore mollitia eius aspernatur modi adipisci harum quidem blanditiis minus. Facilis rem voluptatibus voluptatem culpa nostrum eligendi magnam.</p>
+    <p> <strong>¡Transforma tu espacio con nuestros elegantes cuadros decorativos!</strong> Disponibles en dos tamaños, 20x30 cm y 30x40 cm, están fabricados con madera MDF de alta calidad, garantizando durabilidad y una apariencia sofisticada. La imagen, impresa en vinilo adhesivo con tintas UV, ofrece colores vibrantes y duraderos, resistentes a la decoloración.Perfectos para cualquier ambiente, estos cuadros añaden un toque de arte y estilo a tu hogar u oficina.</p>
 </div>
 
-        </Section>
+        </section>
 
-        <Section class="mercado">
+        <section class="mercado">
             <h2>Productos Destacados</h2>
-<div>
-            <a  href="./PagCuadros/CuadroGoW.html"><img class="destacado" src="./imagenes/21x31 God of War (6).jpg" alt="imagen"></a>
+<div class="cards-container">
+
+            <div class="card"><a  href="./PagCuadros/CuadroGoW.html"><img class="destacado" src="./imagenes/21x31 God of War (6).jpg" alt="imagen"></a>
+            <h2>God of War</h2>
+            </div>
+
+            <div class="card">
             <a href="./PagCuadros/CuadroCristiano.html"><img class="destacado" src="./imagenes/21x31 Fulbo .jpg" alt="imagen"></a>
-            <a href="./PagCuadros/Naruto.html"><img class="destacado" src="./imagenes/21x31 Naruto (1).jpg" alt="imagen"></a>
-            <a href="./PagCuadros/CuadroGuardianes.html"><img class="destacado" src= "./imagenes/21x31 Guardianes de la Galaxia.jpg" alt="imagen"></a>
+            <h2>Cristiano Ronaldo</h2>
+            </div>
+
+            <div class="card"><a href="./PagCuadros/Naruto.html"><img class="destacado" src="./imagenes/21x31 Naruto (1).jpg" alt="imagen"></a>
+                <h2>Naruto</h2>
+            </div>
+
+            <div class="card"><a href="./PagCuadros/CuadroGuardianes.html"><img class="destacado" src= "./imagenes/21x31 Guardianes de la Galaxia.jpg" alt="imagen"></a>
+                <h2>Guardianes</h2>
+            </div>
 </div>
-        
+</section>
     </main>
     <footer class="footer">
         <h3>Contactanos</h3>
@@ -63,6 +78,6 @@
         </ul>
     </footer>
 </div>
-
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 </html>
