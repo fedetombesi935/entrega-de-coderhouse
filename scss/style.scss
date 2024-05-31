@@ -1,0 +1,439 @@
+// Variables
+$primary-color: #5D02A2;
+$secondary-color: #003cff;
+$text-color: #E5EFF7;
+$background-color: #191818fe;
+$box-shadow-color: black;
+$font-family-primary: "Kanit-SemiBold";
+$font-family-secondary: Arial, Helvetica, sans-serif;
+
+// Mixins
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin flex-column {
+  display: flex;
+  flex-direction: column;
+}
+
+@mixin grid-template($areas, $columns, $rows) {
+  display: grid;
+  grid-template-areas: $areas;
+  grid-template-columns: $columns;
+  grid-template-rows: $rows;
+}
+
+// Global styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+// Grid layout
+.contenedor {
+  @include grid-template(
+    "header header header"
+    "main main main"
+    "footer footer footer",
+    1fr 1fr 1fr,
+    0.5fr 2fr 0.3fr
+  );
+  height: 100vh;
+
+  @media screen and (max-width: 768px) {
+    @include grid-template(
+      "header header"
+      "main main"
+      "footer footer",
+      1fr 1fr,
+      0.5fr 2fr
+    );
+  }
+
+  @media screen and (max-width: 480px) {
+    @include grid-template(
+      "header"
+      "main"
+      "footer",
+      1fr,
+      1fr
+    );
+  }
+}
+
+.header {
+  grid-area: header;
+  background-color: $primary-color;
+
+  div {
+    @include flex-center;
+    justify-content: space-around;
+    height: 200px;
+
+    @media screen and (max-width: 768px) {
+      flex-direction: column;
+      align-items: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      flex-direction: column;
+      align-items: center;
+    }
+  }
+
+  .logo {
+    width: 220px;
+    display: inline-block;
+
+    @media screen and (max-width: 768px) {
+      width: 120px;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 120px;
+    }
+  }
+
+  h1 {
+    align-self: center;
+    color: $text-color;
+    font-family: $font-family-primary;
+    font-size: 50px;
+    display: inline-block;
+
+    @media screen and (max-width: 768px) {
+      font-size: 20px;
+    }
+
+    @media screen and (max-width: 480px) {
+      font-size: 20px;
+    }
+  }
+
+  .menu {
+    background-color: $background-color;
+    height: 50px;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      justify-content: center;
+    }
+
+    a {
+      padding: 15px;
+      margin: 5px;
+      color: $text-color;
+      text-decoration: none;
+
+      &:hover {
+        background-color: $secondary-color;
+        color: $background-color;
+      }
+    }
+  }
+}
+
+.main {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.footer {
+  grid-area: footer;
+  background-color: $primary-color;
+  color: $text-color;
+  padding: 30px;
+
+  h3 {
+    display: inline-block;
+    padding-bottom: 5px;
+    font-family: $font-family-primary;
+    padding-left: 20px;
+  }
+
+  ul {
+    list-style: none;
+    font-weight: 400;
+
+    li {
+      padding-bottom: 5px;
+    }
+  }
+}
+
+body {
+  font-family: $font-family-secondary;
+}
+
+@font-face {
+  font-family: $font-family-primary;
+  src: url("../font/Kanit-SemiBold.ttf");
+}
+
+// Index styles
+.caracteristicas {
+  padding: 1rem;
+  background-color: $secondary-color;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  margin-bottom: 30px;
+
+  p {
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px;
+    width: 600px;
+    color: $text-color;
+    line-height: 25px;
+  }
+
+  img {
+    width: 500px;
+    border-radius: 25px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+
+    p {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 450px;
+
+    p {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+}
+
+.titulo-caracteristicas {
+  padding: 15px;
+  padding-left: 10px;
+  text-align: center;
+}
+
+.mercado {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  h2 {
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.cards-container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 20px;
+  margin-bottom: 70px;
+  background-color: $secondary-color;
+  border: solid $secondary-color;
+  border-radius: 25px;
+
+  @media screen and (max-width: 768px) {
+    width: 600px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 460px;
+  }
+
+  .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px $box-shadow-color;
+    width: 250px;
+    height: 405px;
+    padding: 20px;
+    margin: 5px;
+
+    img {
+      width: 100%;
+      border-radius: 10px;
+    }
+
+    h2 {
+      color: $primary-color;
+      padding-top: 10px;
+      font-size: 1.5rem;
+      font-family: $font-family-primary;
+      text-align: center;
+    }
+
+    @media screen and (max-width: 480px) {
+      width: 100%;
+      height: auto;
+    }
+  }
+}
+
+// Catalogo styles
+.cards-container_catalogo {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  margin: 20px;
+  background-color: $secondary-color;
+  border: solid $secondary-color;
+  border-radius: 25px;
+
+  @media screen and (max-width: 768px) {
+    width: 650px;
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+  }
+}
+
+.titulo-catalogo {
+  margin-top: 15px;
+}
+
+// Contact styles
+.mapa {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  padding: 20px;
+  height: 400px;
+
+  img {
+    width: 450px;
+    border-radius: 25px;
+    border: solid black;
+  }
+
+  ul {
+    padding: 20px;
+    list-style: none;
+    display: block;
+    font-size: 20px;
+    font-family: $font-family-primary;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+
+    ul {
+      font-size: 16px;
+    }
+  }
+}
+
+// Nosotros styles
+.nosotros {
+  width: 1260px;
+  display: flex;
+  flex-wrap: wrap;
+  height: 400px;
+  padding: 20px;
+
+  img {
+    width: 450px;
+    border-radius: 25px;
+    border: solid black;
+  }
+
+  p {
+    font-family: $font-family-primary;
+    font-size: 20px;
+    padding: 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    width: 600px;
+    flex-direction: column;
+    align-items: center;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    width: 100%;
+    height: auto;
+
+    img {
+      width: 100%;
+    }
+
+    p {
+      font-size: 16px;
+      padding: 15px;
+    }
+  }
+}
