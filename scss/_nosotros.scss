@@ -1,0 +1,27 @@
+/*nosotros*/
+
+.nosotros{
+    
+    width: 1260px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    height: 400px;
+    padding: 20px;
+
+    img{
+        width: 450px;
+        height: 300px;
+        border-radius: 25px;
+        border: solid black;
+    }
+
+    p{
+        font-size: 17px;
+        display: inline-block;
+        padding: 20px;
+        width: 600px;
+        line-height: 25px;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+}

@@ -1,0 +1,25 @@
+/*contacto*/
+
+.mapa{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding: 20px;
+    height: 400px;
+
+    img{
+        width: 450px;
+        border-radius: 25px;
+        border: solid black;
+       
+    }
+
+    ul{
+        padding: 20px;
+        list-style: none;
+        display: block;
+        font-size: 20px;
+        font-family: "Kanit-SemiBold";
+    }
+}

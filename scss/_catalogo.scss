@@ -1,0 +1,52 @@
+/*catalogo*/
+
+.cards-container_catalogo{
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+    margin: 20px;
+    background-color: $bgcolor;
+    border: solid $bgcolor;
+    border-radius: 25px;
+
+    .card:hover{
+        transform: translate(10px 10px);
+        transition:  1s;
+        width: 270px; 
+        height:420 ;
+     }
+
+    .card {
+        background-color: $colorblanco;
+        border: 1px solid $colorblanco;
+        border-radius: 10px;
+        box-shadow: 0 10px 12px black;
+        width: 250px;
+        height: 405px;
+        padding: 20px;
+        margin: 5px;
+        transition: all 1s;
+
+        h2 { 
+            color:$bgcolor;
+            padding-top: 10px;
+            font-size: 1.5rem;
+            font-family: "Kanit-SemiBold";
+            text-align: center;
+        }
+
+        img {
+            width: 100%;
+            border-radius: 10px;
+        }
+     }
+}
+
+
+.titulo-catalogo{
+    margin-top: 15px;
+}

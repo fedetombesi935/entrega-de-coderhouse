@@ -1,127 +1,21 @@
+@import "grilla" ;
+@import "header" ;
+@import "footer" ;
+@import "catalogo" ;
+@import "nosotros" ;
+@import "cuadroIndividual" ;
+@import "vars" ;
 *{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
-/*grilla*/
-.contenedor {  display: grid;
-    
-    height: 100vh;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 2fr 0.3fr;
-    gap: 0px 0px;
-    grid-template-areas:
-      "header header header"
-      "main main main"
-      "footer footer footer";
-  
-  
-  .header { grid-area: header;
-    background-color: #5D02A2;
- }
-  .main { grid-area: main;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
- }
-
- .footer { grid-area: footer;
-    background-color: #5D02A2;
-    color: #E5EFF7;
-    padding: 30px; }
-}
-
-
-@font-face{
-    font-family: "Kanit-SemiBold";
-    src: url("../font/Kanit-SemiBold.ttf"); 
-     }
-
-/*header*/
-
-header{
-    div{
-        display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: space-around;
-        
-        height:200px;
-    } 
-        
-    .logo{
-        
-        width: 220px;
-        display: inline-block;
-        transition: all 2s;
-        
-    }
-    .logo:hover{
-        transition :   1s;
-        width: 230px;      
-    }
-  
-    h1{
-        align-self: center;
-        justify-self: flex-start;
-        color: #E5EFF7;
-        font-family: "Kanit-SemiBold";
-        font-size: 50px;
-        display: inline-block;
-    }
-
-    .menu{
-        background-color:#191818fe;
-        height: 50px;
-        list-style: none;
-        margin: auto;
-        display: flex;
-        align-items: center;
-        justify-content: end;
-        
-    }
-    
-    
-    .barra a{
-        padding: 15px;
-        margin: 5px;
-        color: #E5EFF7;
-        text-decoration: none;
-        
-      
-    }
-    .barra a:hover{
-        background-color: #6c02be;
-        color: #191818fe;
-        
-    }
-
-}    
-
-footer{
-    
-    h3{
-        display:inline-block;
-        padding-bottom: 5px;
-        font-family: "Kanit-SemiBold";
-        padding-left: 20px;
-    }
-
-    ul{
-        list-style: none;
-        font-weight: 400;
-
-        li{
-            padding-bottom: 5px;
-        }
-    }
- }
+/*index*/
 
 .caracteristicas{
     padding: 1rem;
-    background-color:#6c02be;
+    background-color:$bgcolor;
     width: 1200px;
     display: flex;
     flex-direction: row;
@@ -135,7 +29,7 @@ footer{
         font-size: 17px;
         padding: 10px;
         width: 600px;
-        color: #E5EFF7 ;
+        color: $colorblanco ;
         line-height: 25px;
         }
 
@@ -167,8 +61,8 @@ footer{
             padding-bottom: 30px;
             margin: 20px;
             margin-bottom: 70px;
-            background-color: #6c02be;
-            border: solid #6c02be;
+            background-color: $bgcolor;
+            border: solid $bgcolor;
             border-radius: 25px;
 
             .card:hover{
@@ -179,8 +73,8 @@ footer{
              }
 
             .card {
-                background-color: #ffffff;
-                border: 1px solid #ddd;
+                background-color:$colorblanco;
+                border: 1px solid $colorblanco;
                 border-radius: 10px;
                 box-shadow: 0 10px 12px black;
                 width: 250px;
@@ -192,7 +86,7 @@ footer{
                 
 
                 h2 { 
-                    color: #5D02A2;
+                    color:$bgcolor;
                     padding-top: 10px;
                     font-size: 1.5rem;
                     font-family: "Kanit-SemiBold";
@@ -206,148 +100,3 @@ footer{
              }
         }
 }
-
-/*catalogo*/
-
-.cards-container_catalogo{
-    width: 1200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-    padding: 20px;
-    margin: 20px;
-    background-color: #6c02be;
-    border: solid #6c02be;
-    border-radius: 25px;
-
-    .card:hover{
-        transform: translate(10px 10px);
-        transition:  1s;
-        width: 270px; 
-        height:420 ;
-     }
-
-    .card {
-        background-color: #ffffff;
-        border: 1px solid #ddd;
-        border-radius: 10px;
-        box-shadow: 0 10px 12px black;
-        width: 250px;
-        height: 405px;
-        padding: 20px;
-        margin: 5px;
-        transition: all 1s;
-
-        h2 { 
-            color: #5D02A2;
-            padding-top: 10px;
-            font-size: 1.5rem;
-            font-family: "Kanit-SemiBold";
-            text-align: center;
-        }
-
-        img {
-            width: 100%;
-            border-radius: 10px;
-        }
-     }
-}
-
-
-.titulo-catalogo{
-    margin-top: 15px;
-}
-
-/*contacto*/
-
-.mapa{
-    width: 1200px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    padding: 20px;
-    height: 400px;
-
-    img{
-        width: 450px;
-        border-radius: 25px;
-        border: solid black;
-       
-    }
-
-    ul{
-        padding: 20px;
-        list-style: none;
-        display: block;
-        font-size: 20px;
-        font-family: "Kanit-SemiBold";
-    }
-}
-
-/*nosotros*/
-
-.nosotros{
-    
-    width: 1260px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    height: 400px;
-    padding: 20px;
-
-    img{
-        width: 450px;
-        height: 300px;
-        border-radius: 25px;
-        border: solid black;
-    }
-
-    p{
-        font-size: 17px;
-        display: inline-block;
-        padding: 20px;
-        width: 600px;
-        line-height: 25px;
-        font-family: Arial, Helvetica, sans-serif;
-    }
-}
-
-/*estilo cuadros individuales*/
-
-.seccion-cuadros {
-    padding: 10px;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 20px;
-}
-
-.titulo-cuadros {
-    text-align: center;
-    color: #E5EFF7;
-    font-family: "Kanit-SemiBold";
-}
-
-.botones-cuadros {
-    width: 100%;
-    max-width: 400px;
-    background-color: #5D02A2;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-evenly;
-    padding: 20px;
-    border-radius: 10px;
-    color: #E5EFF7;
-}
-
-.botones-cuadros h2, .botones-cuadros h3 {
-    color: #E5EFF7;
-}
-.form-select {
-    width: 100%;
-    height: 40px;
-    font-size: 14px;
- }

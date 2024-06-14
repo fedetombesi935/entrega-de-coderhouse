@@ -1,0 +1,37 @@
+/*estilo cuadros individuales*/
+
+.seccion-cuadros {
+    padding: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.titulo-cuadros {
+    text-align: center;
+    color: $colorblanco;
+    font-family: "Kanit-SemiBold";
+}
+
+.botones-cuadros {
+    width: 100%;
+    max-width: 400px;
+    background-color: $bgcolor;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    padding: 20px;
+    border-radius: 10px;
+    color: $bgcolor;
+}
+
+.botones-cuadros h2, .botones-cuadros h3 {
+    color: $bgcolor;
+}
+.form-select {
+    width: 100%;
+    height: 40px;
+    font-size: 14px;
+ }
