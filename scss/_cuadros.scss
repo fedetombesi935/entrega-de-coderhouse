@@ -11,24 +11,24 @@
 
 .titulo-cuadros {
     text-align: center;
-    color: $colorblanco;
+    color:#E5EFF7;
     font-family: "Kanit-SemiBold";
 }
 
 .botones-cuadros {
     width: 100%;
     max-width: 400px;
-    background-color: $bgcolor;
+    background-color:#5D02A2;
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
     padding: 20px;
     border-radius: 10px;
-    color: $bgcolor;
+    color:#5D02A2;
 }
 
 .botones-cuadros h2, .botones-cuadros h3 {
-    color: $bgcolor;
+    color:#E5EFF7;
 }
 .form-select {
     width: 100%;

@@ -1,0 +1,90 @@
+/*index*/
+
+.caracteristicas{
+    padding: 1rem;
+    background-color:#5D02A2;
+    width: 1200px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    border-radius: 25px;
+    margin-bottom: 30px;
+
+    p{
+        display: inline-block;
+        font-size: 17px;
+        padding: 10px;
+        width: 600px;
+        color:#E5EFF7
+         ;
+        line-height: 25px;
+        }
+
+        img{
+            width: 500px;
+            border-radius: 25px;  
+        }
+
+        .titulo-caracteristicas{
+            padding: 15px;
+            padding-left: 10px;
+            }
+ 
+}
+
+.mercado{
+    h2{
+        text-align: center;
+        padding-top: 20px;
+        }
+
+        .cards-container{
+            width: 1200px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+            padding: 20px;
+            padding-bottom: 30px;
+            margin: 20px;
+            margin-bottom: 70px;
+            background-color:#5D02A2;
+            border: solid #5D02A2;
+            border-radius: 25px;
+
+            .card:hover{
+                transform: translate(10px 10px);
+                transition:  1s;
+                width: 270px; 
+                height:420 ;
+             }
+
+            .card {
+                background-color:#E5EFF7;
+                border: 1px solid #E5EFF7 ;
+                border-radius: 10px;
+                box-shadow: 0 10px 12px black;
+                width: 250px;
+                height: 405px;
+                padding: 20px;
+                margin: 5px;
+                transition: all 1s;
+
+                
+
+                h2 { 
+                    color:#5D02A2;
+                    padding-top: 10px;
+                    font-size: 1.5rem;
+                    font-family: "Kanit-SemiBold";
+                    text-align: center;
+                }
+
+                img {
+                    width: 100%;
+                    border-radius: 10px;
+                }
+             }
+        }
+}

@@ -1,40 +1,3 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-/*grilla*/
-.contenedor {
-  display: grid;
-  height: 100vh;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-template-rows: 0.5fr 2fr 0.3fr;
-  gap: 0px 0px;
-  grid-template-areas: "header header header" "main main main" "footer footer footer";
-}
-.contenedor .header {
-  grid-area: header;
-  background-color: #5D02A2;
-}
-.contenedor .main {
-  grid-area: main;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-.contenedor .footer {
-  grid-area: footer;
-  background-color: #5D02A2;
-  color: #E5EFF7;
-  padding: 30px;
-}
-
-@font-face {
-  font-family: "Kanit-SemiBold";
-  src: url("../font/Kanit-SemiBold.ttf");
-}
 /*header*/
 header div {
   display: flex;
@@ -94,81 +57,6 @@ footer ul li {
   padding-bottom: 5px;
 }
 
-.caracteristicas {
-  padding: 1rem;
-  background-color: #6c02be;
-  width: 1200px;
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
-  border-radius: 25px;
-  margin-bottom: 30px;
-}
-.caracteristicas p {
-  display: inline-block;
-  font-size: 17px;
-  padding: 10px;
-  width: 600px;
-  color: #E5EFF7;
-  line-height: 25px;
-}
-.caracteristicas img {
-  width: 500px;
-  border-radius: 25px;
-}
-.caracteristicas .titulo-caracteristicas {
-  padding: 15px;
-  padding-left: 10px;
-}
-
-.mercado h2 {
-  text-align: center;
-  padding-top: 20px;
-}
-.mercado .cards-container {
-  width: 1200px;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 20px;
-  padding: 20px;
-  padding-bottom: 30px;
-  margin: 20px;
-  margin-bottom: 70px;
-  background-color: #6c02be;
-  border: solid #6c02be;
-  border-radius: 25px;
-}
-.mercado .cards-container .card:hover {
-  transform: translate(10px 10px);
-  transition: 1s;
-  width: 270px;
-  height: 420;
-}
-.mercado .cards-container .card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
-  border-radius: 10px;
-  box-shadow: 0 10px 12px black;
-  width: 250px;
-  height: 405px;
-  padding: 20px;
-  margin: 5px;
-  transition: all 1s;
-}
-.mercado .cards-container .card h2 {
-  color: #5D02A2;
-  padding-top: 10px;
-  font-size: 1.5rem;
-  font-family: "Kanit-SemiBold";
-  text-align: center;
-}
-.mercado .cards-container .card img {
-  width: 100%;
-  border-radius: 10px;
-}
-
 /*catalogo*/
 .cards-container_catalogo {
   width: 1200px;
@@ -179,8 +67,8 @@ footer ul li {
   gap: 20px;
   padding: 20px;
   margin: 20px;
-  background-color: #6c02be;
-  border: solid #6c02be;
+  background-color: #5D02A2;
+  border: solid #5D02A2;
   border-radius: 25px;
 }
 .cards-container_catalogo .card:hover {
@@ -190,8 +78,8 @@ footer ul li {
   height: 420;
 }
 .cards-container_catalogo .card {
-  background-color: #ffffff;
-  border: 1px solid #ddd;
+  background-color: #E5EFF7;
+  border: 1px solid #E5EFF7;
   border-radius: 10px;
   box-shadow: 0 10px 12px black;
   width: 250px;
@@ -287,7 +175,7 @@ footer ul li {
   justify-content: space-evenly;
   padding: 20px;
   border-radius: 10px;
-  color: #E5EFF7;
+  color: #5D02A2;
 }
 
 .botones-cuadros h2, .botones-cuadros h3 {
@@ -298,6 +186,483 @@ footer ul li {
   width: 100%;
   height: 40px;
   font-size: 14px;
+}
+
+/*index*/
+.caracteristicas {
+  padding: 1rem;
+  background-color: #5D02A2;
+  width: 1200px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  border-radius: 25px;
+  margin-bottom: 30px;
+}
+.caracteristicas p {
+  display: inline-block;
+  font-size: 17px;
+  padding: 10px;
+  width: 600px;
+  color: #E5EFF7;
+  line-height: 25px;
+}
+.caracteristicas img {
+  width: 500px;
+  border-radius: 25px;
+}
+.caracteristicas .titulo-caracteristicas {
+  padding: 15px;
+  padding-left: 10px;
+}
+
+.mercado h2 {
+  text-align: center;
+  padding-top: 20px;
+}
+.mercado .cards-container {
+  width: 1200px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  padding-bottom: 30px;
+  margin: 20px;
+  margin-bottom: 70px;
+  background-color: #5D02A2;
+  border: solid #5D02A2;
+  border-radius: 25px;
+}
+.mercado .cards-container .card:hover {
+  transform: translate(10px 10px);
+  transition: 1s;
+  width: 270px;
+  height: 420;
+}
+.mercado .cards-container .card {
+  background-color: #E5EFF7;
+  border: 1px solid #E5EFF7;
+  border-radius: 10px;
+  box-shadow: 0 10px 12px black;
+  width: 250px;
+  height: 405px;
+  padding: 20px;
+  margin: 5px;
+  transition: all 1s;
+}
+.mercado .cards-container .card h2 {
+  color: #5D02A2;
+  padding-top: 10px;
+  font-size: 1.5rem;
+  font-family: "Kanit-SemiBold";
+  text-align: center;
+}
+.mercado .cards-container .card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+@media screen and (max-width: 768px) {
+  .contenedor {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 0.5fr 2fr;
+    gap: 0px 0px;
+    grid-template-areas: "header header " "Main Main " "footer footer ";
+  }
+  .header {
+    grid-area: header;
+    background-color: #5D02A2;
+  }
+  .header div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+  }
+  .header .logo {
+    width: 140px;
+    display: inline-block;
+  }
+  .header h1 {
+    justify-self: flex-start;
+    color: #E5EFF7;
+    font-family: "Kanit-SemiBold";
+    font-size: 20px;
+    display: inline-block;
+  }
+  .header .menu {
+    background-color: rgba(25, 24, 24, 0.9960784314);
+    height: 50px;
+    list-style: none;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .main {
+    grid-area: Main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .titulo-caracteristicas {
+    text-align: center;
+  }
+  .caracteristicas {
+    padding: 1rem;
+    background-color: #5D02A2;
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .mercado {
+    width: 700px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mercado .mercado h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .mercado .cards-container {
+    width: 750px;
+    height: 1000px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+  }
+  .mercado .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px black;
+    width: 350px;
+    padding: 20px;
+  }
+  .mercado .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .mercado .card h2 {
+    color: #5D02A2;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-family: "Kanit-SemiBold";
+    text-align: center;
+  }
+  .main {
+    grid-area: Main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards-container_catalogo {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 25px;
+  }
+  .titulo-catalogo {
+    margin-top: 15px;
+  }
+  .nosotros {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 700px;
+    padding: 20px;
+  }
+  .nosotros img {
+    width: 450px;
+    height: 300px;
+    border-radius: 25px;
+    border: solid black;
+  }
+  .nosotros p {
+    text-align: center;
+    font-size: 17px;
+    display: inline-block;
+    padding: 15px;
+    width: 450px;
+    height: 300px;
+  }
+  .mapa {
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    height: 500px;
+  }
+  .mapa img {
+    width: 450px;
+    border-radius: 25px;
+    border: solid black;
+  }
+  .mapa ul {
+    padding: 20px;
+    list-style: none;
+    display: block;
+    font-size: 20px;
+    font-family: "Kanit-SemiBold";
+  }
+  .footer {
+    grid-area: footer;
+    background-color: #5D02A2;
+    color: #E5EFF7;
+    padding: 30px;
+  }
+}
+@media screen and (max-width: 324px) {
+  .contenedor {
+    display: grid;
+    height: 100vh;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr;
+    gap: 0px 0px;
+    grid-template-areas: "header " "Main  " "footer  ";
+  }
+  .header {
+    grid-area: header;
+    background-color: #5D02A2;
+  }
+  .header div {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    height: 200px;
+  }
+  .header .logo {
+    width: 140px;
+    display: inline-block;
+  }
+  .header h1 {
+    justify-self: flex-start;
+    color: #E5EFF7;
+    font-family: "Kanit-SemiBold";
+    font-size: 20px;
+    display: inline-block;
+  }
+  .header .menu {
+    background-color: rgba(25, 24, 24, 0.9960784314);
+    height: 50px;
+    list-style: none;
+    margin: 1px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .header .barra a {
+    padding: 2px;
+    margin: 2px;
+    color: #E5EFF7;
+    text-decoration: none;
+  }
+  .main {
+    grid-area: Main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .titulo-caracteristicas {
+    text-align: center;
+  }
+  .caracteristicas {
+    padding: 1rem;
+    background-color: #5D02A2;
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+  }
+  .caracteristicas p {
+    display: inline-block;
+    font-size: 17px;
+    padding: 10px;
+    width: 240px;
+    color: #E5EFF7;
+    line-height: 25px;
+  }
+  .caracteristicas img {
+    width: 240px;
+    border-radius: 25px;
+  }
+  .mercado {
+    width: 400px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .mercado .mercado h2 {
+    text-align: center;
+    padding-bottom: 20px;
+  }
+  .mercado .cards-container {
+    width: 280px;
+    height: 1800px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-self: center;
+  }
+  .mercado .card {
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 10px 12px black;
+    width: 120px;
+  }
+  .mercado .card img {
+    width: 100%;
+    border-radius: 10px;
+  }
+  .mercado .card h2 {
+    color: #5D02A2;
+    padding-top: 10px;
+    font-size: 1.5rem;
+    font-family: "Kanit-SemiBold";
+    text-align: center;
+  }
+  .main {
+    grid-area: Main;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .cards-container_catalogo {
+    width: 650px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    border-radius: 25px;
+  }
+  .titulo-catalogo {
+    margin-top: 15px;
+  }
+  .nosotros {
+    width: 310px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 700px;
+    padding: 10px;
+  }
+  .nosotros img {
+    width: 290px;
+    height: 280px;
+    border-radius: 25px;
+    border: solid black;
+  }
+  .nosotros p {
+    text-align: center;
+    font-size: 10px;
+    display: inline-block;
+    width: 300px;
+    height: 100px;
+    margin-bottom: 10px;
+  }
+  .mapa {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 20px;
+    height: 500px;
+  }
+  .mapa img {
+    width: 280px;
+    border-radius: 25px;
+    border: solid black;
+  }
+  .mapa ul {
+    padding: 20px;
+    list-style: none;
+    display: block;
+    font-size: 15px;
+    font-family: "Kanit-SemiBold";
+  }
+  .footer {
+    grid-area: footer;
+    background-color: #5D02A2;
+    color: #E5EFF7;
+    padding: 30px;
+  }
+  .seccion-cuadros {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+  }
+  .seccion-cuadros .carousel-inner {
+    width: 280px;
+    align-self: center;
+  }
+  .seccion-cuadros .botones-cuadros {
+    height: 300px;
+    flex-direction: column;
+    justify-content: space-evenly;
+  }
+}
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.contenedor {
+  display: grid;
+  height: 100vh;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 0.5fr 2fr 0.3fr;
+  gap: 0px 0px;
+  grid-template-areas: "header header header" "main main main" "footer footer footer";
+}
+.contenedor .header {
+  grid-area: header;
+  background-color: #5D02A2;
+}
+.contenedor .main {
+  grid-area: main;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.contenedor .footer {
+  grid-area: footer;
+  background-color: #5D02A2;
+  color: #E5EFF7;
+  padding: 30px;
+}
+
+@font-face {
+  font-family: "Kanit-SemiBold";
+  src: url("../font/Kanit-SemiBold.ttf");
 }
 
 /*# sourceMappingURL=style.css.map */
